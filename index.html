@@ -50,9 +50,6 @@ a.card{display:block;transition:border-color .2s}a.card:hover,a.card:focus-visib
 .card p{color:var(--muted);line-height:1.6;font-size:.9rem;margin:0 0 16px}
 .tags{display:flex;flex-wrap:wrap;gap:8px}
 .tags span{font-size:.72rem;color:var(--accent-2);border:1px solid var(--line);border-radius:999px;padding:4px 10px}
-#projets{display:none}
-body.show-projets main{display:none}
-body.show-projets #projets{display:block}
 </style>
 </head>
 <body>
@@ -73,7 +70,7 @@ body.show-projets #projets{display:block}
     </div>
   </section>
   <div class="visual">
-    <div class="avatar"><img src="photoo.jpg" alt="Photoo de Zinedine Maouchi"></div>
+   <!-- <div class="avatar"><img src="photo.jpg" alt="Photo de Zinedine Maouchi"></div> -->
     <div class="orb o1">&lt;/&gt;</div><div class="orb o2">⬡</div><div class="orb o3">&lt;/&gt;</div>
   </div>
 </main>
@@ -86,13 +83,5 @@ body.show-projets #projets{display:block}
     <article class="card"><h4>Labs FortiGate</h4><p>Configuration d'un pare-feu : politiques de sécurité, NAT, filtrage et VPN.</p><div class="tags"><span>FortiGate</span><span>Pare-feu</span><span>VPN</span></div></article>
   </div>
 </section>
-<script>
-function afficher(){
-  document.body.classList.toggle('show-projets', location.hash === '#projets');
-  window.scrollTo(0,0);
-}
-window.addEventListener('hashchange', afficher);
-afficher();
-</script>
 </body>
 </html>
