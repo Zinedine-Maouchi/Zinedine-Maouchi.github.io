@@ -50,6 +50,9 @@ a.card{display:block;transition:border-color .2s}a.card:hover,a.card:focus-visib
 .card p{color:var(--muted);line-height:1.6;font-size:.9rem;margin:0 0 16px}
 .tags{display:flex;flex-wrap:wrap;gap:8px}
 .tags span{font-size:.72rem;color:var(--accent-2);border:1px solid var(--line);border-radius:999px;padding:4px 10px}
+#projets{display:none}
+body.show-projets main{display:none}
+body.show-projets #projets{display:block}
 </style>
 </head>
 <body>
@@ -83,5 +86,13 @@ a.card{display:block;transition:border-color .2s}a.card:hover,a.card:focus-visib
     <article class="card"><h4>Labs FortiGate</h4><p>Configuration d'un pare-feu : politiques de sécurité, NAT, filtrage et VPN.</p><div class="tags"><span>FortiGate</span><span>Pare-feu</span><span>VPN</span></div></article>
   </div>
 </section>
+<script>
+function afficher(){
+  document.body.classList.toggle('show-projets', location.hash === '#projets');
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange', afficher);
+afficher();
+</script>
 </body>
 </html>
